@@ -1,0 +1,37 @@
+doctype html(lang='KO')
+html
+    head
+        title Develop
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        meta(charset="utf-8")
+        style(type='text/css').
+            a:link {
+                color: black;
+                text-decoration: none;
+            }
+
+            a:visited {
+                color: black;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: black;
+                text-decoration: underline;
+            }
+    body
+        h1
+            | 개발내용
+        div
+            table(border='1')
+                thead
+                     tr
+                         th No
+                         th Title
+                tbody
+                    each board02 in boards
+                       tr
+                             td
+                                    a('/project/' + board02.no)= board02.no
+                             td
+                                    a(href = '/project/' + board02.no)= board02.title

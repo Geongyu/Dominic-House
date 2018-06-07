@@ -1,0 +1,75 @@
+doctype html(lang='KO')
+html
+    head
+
+        title Study
+        meta(charset="utf-8")
+        script(src='https://code.jquery.com/jquery-3.2.1.min.js',
+        integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+        style(type='text/css').
+            a:link {
+                color: black;
+                text-decoration: none;
+            }
+
+            a:visited {
+                color: black;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: black;
+                text-decoration: underline;
+            }
+    meta(name='viewport', content='width=device-width,initial-scale=1')
+
+    script(src='https://code.jquery.com/jquery-2.2.4.min.js', integrity='sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=', crossorigin='anonymous')
+
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+
+    link(rel='stylesheet', href='/css/master.css')
+
+    nav.navbar.navbar-default
+        .container
+            .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='#myNavbar')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                .navbar-brand Welcome to Dominic House!
+            #myNavbar.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href='/') Home
+                    li
+                        a(href='/main/profile') About
+                    li
+                        a(href='./project/project') Portfolio
+                    li
+                        a(href='./study/study') Study
+                    li
+                        a(href='mailto:rjsrb365@edu.dju.ac.kr') Contact
+                    li
+                        a(href='./auth/login') 관리자 모드로 로그인
+    body
+
+
+        h1
+            | 내가 학습 한, 내가 학습 할..
+        div
+        ul
+            each board01 in boards
+                tr
+                    td
+                        a(href = '/study/' + board01.No)= board01.Title
+                    article
+                       h2= title
+                         = Title
+            article
+                if board01
+                   h2= board01.Title
+                    = board01.Content
+                else
+                     h2 Welcome Dominic's House
+                          | Welcome to My House! Enjoy your time!

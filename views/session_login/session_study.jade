@@ -1,0 +1,52 @@
+doctype html(lang='KO')
+html
+    head
+
+        title Study
+        meta(charset="utf-8")
+        script(src='https://code.jquery.com/jquery-3.2.1.min.js',
+        integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=', crossorigin='anonymous')
+        style(type='text/css').
+            a:link {
+                color: black;
+                text-decoration: none;
+            }
+
+            a:visited {
+                color: black;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: black;
+                text-decoration: underline;
+            }
+    body
+
+
+        h1
+            | Welcome back Master
+        div
+        ul
+            each board01 in boards
+                tr
+                   td
+                      a(href = '/master_main/master_study/' + board01.No)= board01.Title
+                   article
+                      h2= title
+                        = Title
+            article
+                if board01
+                   h2= board01.Title
+                    = board01.Content
+                else
+                     h2 Run away
+                          | Run away!!!
+                ul
+                    li
+                        a(href='/master_main/master_study/add') Add
+                    if board01
+                        li
+                            a(href='/master_main/master_study/'+board01.No +'/edit') Edit
+                        li
+                            a(href='/master_main/master_study/'+board01.No +'/delete') Delete
