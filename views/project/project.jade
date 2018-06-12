@@ -1,5 +1,135 @@
-doctype html(lang='KO')
+doctype html
 html
+    head
+        title Portfolio
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, user-scalable=no')
+        link(rel='stylesheet', href='/public/assets/css/main.css')
+        noscript
+            link(rel='stylesheet', href='/public/assets/css/noscript.css')
+    body(oncontextmenu='return false' ondragstart='return false' onselectstart='return false')
+        // Wrapper
+        #wrapper
+            // Header
+            header#header
+                .logo
+                  a(href="")
+                    span.glyphicon.glyphicon-book
+                .content
+                    .inner
+                        h1 Portfolio
+                        p
+                            | 제가 만들었던 내용중 자신 있게 공개 할 수 있는 포트폴리오 관련 내용입니다.
+                            br
+                            a(href='http://dominic.cafe24app.com/') 메인 페이지로
+                            |  돌아가길 원하시면 클릭해 주세요
+                            br
+                nav
+                    ul
+                        li
+                            a(href='#MFC') MFC
+                        li
+                            a(href='#Nodejs') Node.js
+                        li
+                            a(href='#Python') Python
+                        li
+                            a(href='#Swift') Swift
+                        li
+                            a(href='#hosting') 배포
+            // Main
+            #main
+                // MFC
+                article#MFC
+                    h2.major MFC
+                    span.image.main
+                      a(href='http://dominic.cafe24app.com/')
+                        img(src='/public/img/pic01.jpg', alt='')
+                    p
+                        | MFC로 진행했었던 프로젝트 내용입니다
+                    P
+                        h1 암호프로그래밍
+                    p
+                        | 목적 : 3학년 수업중 '암호 프로그래밍' 수업에 학습한 내용을 토대로 하여 해당 수업에서 배운 코드와 암호학을 추가로 공부한 내용등을 추가하여
+                        | 학습을 진행하기 위하여 진행되었든 프로젝트. 'MD5'와 'SHA' 암호화에 중점을 두고 기말 프로그래밍을 위하여 제작하였던
+                        | 개인 Windows 보안용 프로그램을 진행하여 제작하기 까지의 과정입니다
+                    p
+                        | 설계 : 해당 프로그램의 컨셉은 다음과 같았습니다.
+                    img(src='')
+                    p
+                        | 해당 프로그램은 사용자가 어떻게 하면 조금 더 쉬운 환경에서 개인의 PC를 관리하며 악의적인 목적의 제 3자가 이 컴퓨터를 사용할 경우 어떻게 해야
+                        | 내 개인정보들과 프라이버시를 보호 받을 수 있을까? 라는 생각에서 제작을 하였던 프로그램입니다.
+                    P
+                        | 프로그램의 주요기능은 매우 단순합니다. 하지만 그만큼 강력합니다.
+                        | 우선 프로그램을 최초 실행시 (windows 10 기준으로) 해당 프로그램은 관리자 권한을 사용자에게 요청합니다. 한번 요청이 된 관리자 권한은
+                        | 사용자가 해당 프로그램을 종료할때까지 유지되며 이를 바탕으로 해당 프로그램이 정상적으로 작동되게 됩니다.
+                    P
+                        | 기본적인 기능으로 해당 프로그램은 Window 계정에 로그인하여 해당 컴퓨터의 비밀번호를 바꾸게 도와줍니다.
+                        | 즉, 굳이 설정란에 계정에 들어가지 않고도 프로그램을 통하여 암호 생성, 변경, 삭제가 가능합니다
+                    P
+                        | 두번째로, 해당 프로그램은 강력한 로그-오프 기능을 제공합니다. 기존의 로그오프 기능의 경우 컴퓨터가 새로 켜질경우
+                        | 윈도우 계정의 비밀번호만 입력을 하였지만, 그와는 별개로 강제 이벤트를 삽입하여 2차 비밀번호를 강제하게 합니다
+                        | 뿐만아니라 비밀번호가 1회 틀릴경우, 해당 컴퓨터가 캠이 있을경우 캠으로 지금 로그인중인 사용자의 사진을 찍어
+                        | 미리 설정이 된 메일 계정으로 전송을 하게 됩니다.
+                    p
+                        | 가장 중요한 기능으로 프라이버시 보호 기능이 있습니다.
+                // Node.js
+                article#Nodejs
+                    h2.major Node.js
+                    span.image.main
+                        img(src='/public/img/pic02.jpg', alt='')
+                    p
+                        | Node.js 공부를 하며 만든 프로젝트 내용입니다
+                    P
+                        | Dominic House
+                // Python
+                article#Python
+                    h2.major Python
+                    span.image.main
+                        img(src='/public/img/pic03.jpg', alt='')
+                    p
+                        | Python 공부를 진행하며 만든 프로젝트 내용입니다
+                    P
+                        | 통합 플랫폼 로그 분석기
+                    P
+                        | 취약점 스캐너
+                // Swift
+                article#Swift
+                    h2.major Swift
+                    span.image.main
+                        img(src='/public/img/pic03.jpg', alt='')
+                    p
+                        | Swift 공부를 진행하며 만든 프로젝트 내용입니다
+                    P
+                        | 아이폰용 로그 분석기
+                article#hosting
+                    h2.major 배포
+                    span.image.main
+                        img(src='/public/img/pic03.jpg', alt='')
+                    p
+                        | 배포를 하기까지의 이야기를 적어두는 곳입니다
+                    P
+                        | 통합 플랫폼 로그 분석기
+                    P
+                        | Dominic House
+                // Elements
+
+            // Footer
+            footer#footer
+                p.copyright
+                    | © Untitled. Design:
+                    a(href='https://html5up.net') HTML5 UP
+                    | 해당 화면의 소스코드는 해당 라이센스에 의해 보호됩니다
+        // BG
+        #bg
+        // Scripts
+        script(src='/public/assets/js/jquery.min.js')
+        script(src='/public/assets/js/skel.min.js')
+        script(src='/public/assets/js/util.js')
+        script(src='/public/assets/js/main.js')
+
+
+//doctype html(lang='KO')
+//html
     head
         title Develop
         link(rel='stylesheet', href='/stylesheets/style.css')

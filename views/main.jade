@@ -1,48 +1,18 @@
-
 doctype html(lang='KO')
 html
     head
+        link(rel='shortcut icon', href= '/home/hosting_users/rjsrb365/apps/rjsrb365_dominic/public/ico/favicon.ico')
         title Welcome to Dominic's House
+        // Global site tag (gtag.js) - Google Analytics
+        script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-120497105-1')
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'UA-120497105-1');
         style.
-            h3 {
-                text-align: left;
-                color: black
-            }
-
-            span {
-                clolor: blue;
-                font-size: 20px;
-            }
-
-            a:link {
-                color: black;
-                text-decoration: none;
-            }
-
-            a:visited {
-                color: black;
-                text-decoration: none;
-            }
-
-            a:hover {
-                color: black;
-                text-decoration: underline;
-            }
-
-            ]
-            body {
-                margin: 0;
-            }
-
-            #fixed-menu {
-                width: 100%;
-                background-color: #ffffff;
-            }
-
-            #main-content {
-                width: 100%;
-            }
-
             #fixed-menu li {
                 display: inline-block;
                 margin-right: 30px;
@@ -55,7 +25,7 @@ html
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
 
     link(rel='stylesheet', href='/css/master.css')
-
+    body
     nav.navbar.navbar-default
         .container
             .navbar-header
@@ -80,10 +50,39 @@ html
                         a(href='./auth/login') 관리자 모드로 로그인
 
 
-.container.home.home-welcome
-    .jumbotron
-        h1 Welcome!
-        p
-            | Hello! I'm Geon Gyu Lee (Dominic Lee)
-            | Welcome to My House! Enjoy yours!
-        iframe(width='560', height='315', src='https://www.youtube.com/embed/bWUSnLgDBEY', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+    .container.home.home-welcome
+        .jumbotron
+            h1 Welcome!
+            p
+                | Hello! I'm Geon Gyu Lee (Dominic Lee)
+                | Welcome to My House! Enjoy yours!
+            P
+                | 다음은 홈페이지 개발상황 진척도 입니다
+            .progress
+                .progress-bar.progress-bar-striped(role='progressbar', style='width: 100%', aria-valuenow='10', aria-valuemin='0', aria-valuemax='100')
+                    | 홈페이지 메인
+            .progress
+                .progress-bar.progress-bar-striped.bg-success(role='progressbar', style='width: 100%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
+                    | 프로필 창
+            .progress
+                .progress-bar.progress-bar-striped.bg-info(role='progressbar', style='width: 100%', aria-valuenow='50', aria-valuemin='0', aria-valuemax='100')
+                    | 개발내용 게시판
+            .progress
+                .progress-bar.progress-bar-striped.active(role='progressbar', aria-valuenow='40', aria-valuemin='0', aria-valuemax='100', style='width:40%')
+                    | 스터디 게시판
+            .progress
+                .progress-bar.progress-bar-striped.bg-info(role='progressbar', style='width: 100%', aria-valuenow='100', aria-valuemin='0', aria-valuemax='100')
+                    | 마스터 페이지 (삭제예정)
+
+    // Start of Tawk.to Script
+    script(type='text/javascript').
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/5af124345f7cdf4f0533f200/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    // End of Tawk.to Script

@@ -57,8 +57,8 @@ passport.deserializeUser(function (username, done) {
     });
 });
 
-router.post('/login', passport.authenticate('local',{
-    successRedirect: '/auth/login',
+router.post(['/login', '/auth/login'], passport.authenticate('local',{
+    successRedirect: '/master_main',
     failureRedirect: '/login',
     failureFlash: true
 }));
