@@ -1,0 +1,52 @@
+doctype html(lang='KO')
+html
+    head
+        title Welcome to Dominic's House
+        style.
+            h3 {text-align : left; color : black}
+            span {clolor : blue; font-size : 20px;}
+            a:link { color: black; text-decoration: none;}
+            a:visited { color: black; text-decoration: none;}
+            a:hover { color: black; text-decoration: underline;}
+            ]
+            body {
+                margin: 0;
+            }
+            #fixed-menu {
+                width: 100%;
+                background-color: #ffffff;
+            }
+            #main-content {
+                width: 100%;
+            }
+            #fixed-menu li {
+                display: inline-block;
+                margin-right: 30px;
+            }
+        // //리디렉션을 위한 부분
+        //
+          # Redirect HTTPS to HTTP
+          RewriteCond %{HTTP:X-Forwarded-Proto} =https
+          RewriteRule ^(.*)$ http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+        // 해당 코드를 작성하는 위치 확인해야함
+        // Global site tag (gtag.js) - Google Analytics
+
+#fixed-menu
+    h3
+                    div(style='text-align:center')  Welcome to Dominic's House / 이건규의 포트폴리오
+
+            ul
+                li
+                    a(href='./main/profile') Who am I?
+
+                li
+                    a(href='./project/project') Made by Me
+
+                li
+                    a(href='./study/study') Study for Me
+
+                li
+                    a(href='mailto:rjsrb365@edu.dju.ac.kr') Contact
+                li
+                    a(href='./auth/login') 관리자 모드로 로그인
+        iframe(width='560', height='315', src='https://www.youtube.com/embed/bWUSnLgDBEY', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
